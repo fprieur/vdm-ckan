@@ -8,10 +8,10 @@ sudo apt-get update
 
 sudo apt-get install python-dev postgresql libpq-dev python-pip python-virtualenv git-core solr-jetty openjdk-6-jdk -y
 
-mkdir -p ~/ckan/lib
-sudo ln -s ~/ckan/lib /usr/lib/ckan
-mkdir -p ~/ckan/etc
-sudo ln -s ~/ckan/etc /etc/ckan
+mkdir -p /home/vagrant/ckan/lib
+sudo ln -s /home/vagrant/ckan/lib /usr/lib/ckan
+mkdir -p /home/vagrant/ckan/etc
+sudo ln -s /home/vagrant/ckan/etc /etc/ckan
 
 sudo mkdir -p /usr/lib/ckan/default
 sudo chown `whoami` /usr/lib/ckan/default
@@ -45,7 +45,9 @@ sudo service jetty start
 
 
 sudo mv /etc/solr/conf/schema.xml /etc/solr/conf/schema.xml.bak
-sudo ln -s /usr/lib/ckan/default/src/ckan/ckan/config/solr/schema.xml /etc/solr/conf/schema.xml
+#sudo ln -s /usr/lib/ckan/default/src/ckan/ckan/config/solr/schema.xml /etc/solr/conf/schema.xml
+
+sudo ln -s /usr/lib/ckan/default/src/ckan/ckan/config/solr/schema-2.0.xml /etc/solr/conf/schema.xml
 
 sudo service jetty restart
 
