@@ -41,7 +41,7 @@ sudo rm /etc/ckan/default/development.ini
 sudo cp /vagrant_data/development.ini /etc/ckan/default
 
 sudo rm /etc/default/jetty
-sudo cp /vagrant_data/jetty /etc/default/
+sudo cp /vagrant_data/data/jetty /etc/default/
 
 sudo service jetty start
 

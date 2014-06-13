@@ -1,5 +1,4 @@
 # Defaults for jetty see /etc/init.d/jetty for more
-# fichier de config solr vdm
 
 # change to 0 to allow Jetty to start
 NO_START=0 
